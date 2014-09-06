@@ -13,7 +13,6 @@
 		E85FECD819BBCDE60078713F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E85FECD619BBCDE60078713F /* InfoPlist.strings */; };
 		E85FECDA19BBCDE60078713F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E85FECD919BBCDE60078713F /* main.m */; };
 		E85FECDE19BBCDE60078713F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E85FECDD19BBCDE60078713F /* AppDelegate.m */; };
-		E85FECE119BBCDE60078713F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85FECDF19BBCDE60078713F /* Main_iPhone.storyboard */; };
 		E85FECE419BBCDE60078713F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85FECE219BBCDE60078713F /* Main_iPad.storyboard */; };
 		E85FECE719BBCDE60078713F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85FECE619BBCDE60078713F /* ViewController.m */; };
 		E85FECE919BBCDE60078713F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E85FECE819BBCDE60078713F /* Images.xcassets */; };
@@ -22,6 +21,16 @@
 		E85FECF219BBCDE60078713F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E85FECD119BBCDE60078713F /* UIKit.framework */; };
 		E85FECFA19BBCDE60078713F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E85FECF819BBCDE60078713F /* InfoPlist.strings */; };
 		E85FECFC19BBCDE60078713F /* MyResultsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E85FECFB19BBCDE60078713F /* MyResultsTests.m */; };
+		E85FED0719BBCE470078713F /* NoticesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85FED0619BBCE470078713F /* NoticesViewController.m */; };
+		E85FED0A19BBCEA30078713F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85FED0919BBCEA30078713F /* LoginViewController.m */; };
+		E85FED0D19BBCF190078713F /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85FED0C19BBCF190078713F /* RegistrationViewController.m */; };
+		E85FED1019BBCF840078713F /* NamesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85FED0F19BBCF840078713F /* NamesViewController.m */; };
+		E85FED1319BBD00F0078713F /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E85FED1219BBD00F0078713F /* HomeModel.m */; };
+		E85FED1619BBD04F0078713F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E85FED1519BBD04F0078713F /* User.m */; };
+		E85FED1919BBD0910078713F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85FED1819BBD0910078713F /* DetailViewController.m */; };
+		E85FED1C19BBD0D30078713F /* GetSubjects.m in Sources */ = {isa = PBXBuildFile; fileRef = E85FED1B19BBD0D30078713F /* GetSubjects.m */; };
+		E85FED1F19BBD1190078713F /* subject.m in Sources */ = {isa = PBXBuildFile; fileRef = E85FED1E19BBD1190078713F /* subject.m */; };
+		E85FED2119BBD1AE0078713F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85FED2019BBD1AE0078713F /* Main_iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +54,6 @@
 		E85FECDB19BBCDE60078713F /* MyResults-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyResults-Prefix.pch"; sourceTree = "<group>"; };
 		E85FECDC19BBCDE60078713F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E85FECDD19BBCDE60078713F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E85FECE019BBCDE60078713F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		E85FECE319BBCDE60078713F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		E85FECE519BBCDE60078713F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E85FECE619BBCDE60078713F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -55,6 +63,25 @@
 		E85FECF719BBCDE60078713F /* MyResultsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyResultsTests-Info.plist"; sourceTree = "<group>"; };
 		E85FECF919BBCDE60078713F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E85FECFB19BBCDE60078713F /* MyResultsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyResultsTests.m; sourceTree = "<group>"; };
+		E85FED0519BBCE470078713F /* NoticesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticesViewController.h; sourceTree = "<group>"; };
+		E85FED0619BBCE470078713F /* NoticesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticesViewController.m; sourceTree = "<group>"; };
+		E85FED0819BBCEA30078713F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E85FED0919BBCEA30078713F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		E85FED0B19BBCF190078713F /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		E85FED0C19BBCF190078713F /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		E85FED0E19BBCF840078713F /* NamesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NamesViewController.h; sourceTree = "<group>"; };
+		E85FED0F19BBCF840078713F /* NamesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NamesViewController.m; sourceTree = "<group>"; };
+		E85FED1119BBD00F0078713F /* HomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
+		E85FED1219BBD00F0078713F /* HomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
+		E85FED1419BBD04F0078713F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		E85FED1519BBD04F0078713F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		E85FED1719BBD0910078713F /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		E85FED1819BBD0910078713F /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		E85FED1A19BBD0D30078713F /* GetSubjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetSubjects.h; sourceTree = "<group>"; };
+		E85FED1B19BBD0D30078713F /* GetSubjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetSubjects.m; sourceTree = "<group>"; };
+		E85FED1D19BBD1190078713F /* subject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subject.h; sourceTree = "<group>"; };
+		E85FED1E19BBD1190078713F /* subject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = subject.m; sourceTree = "<group>"; };
+		E85FED2019BBD1AE0078713F /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,12 +143,30 @@
 			children = (
 				E85FECDC19BBCDE60078713F /* AppDelegate.h */,
 				E85FECDD19BBCDE60078713F /* AppDelegate.m */,
-				E85FECDF19BBCDE60078713F /* Main_iPhone.storyboard */,
+				E85FED2019BBD1AE0078713F /* Main_iPhone.storyboard */,
 				E85FECE219BBCDE60078713F /* Main_iPad.storyboard */,
 				E85FECE519BBCDE60078713F /* ViewController.h */,
 				E85FECE619BBCDE60078713F /* ViewController.m */,
 				E85FECE819BBCDE60078713F /* Images.xcassets */,
 				E85FECD419BBCDE60078713F /* Supporting Files */,
+				E85FED0519BBCE470078713F /* NoticesViewController.h */,
+				E85FED0619BBCE470078713F /* NoticesViewController.m */,
+				E85FED0819BBCEA30078713F /* LoginViewController.h */,
+				E85FED0919BBCEA30078713F /* LoginViewController.m */,
+				E85FED0B19BBCF190078713F /* RegistrationViewController.h */,
+				E85FED0C19BBCF190078713F /* RegistrationViewController.m */,
+				E85FED0E19BBCF840078713F /* NamesViewController.h */,
+				E85FED0F19BBCF840078713F /* NamesViewController.m */,
+				E85FED1119BBD00F0078713F /* HomeModel.h */,
+				E85FED1219BBD00F0078713F /* HomeModel.m */,
+				E85FED1419BBD04F0078713F /* User.h */,
+				E85FED1519BBD04F0078713F /* User.m */,
+				E85FED1719BBD0910078713F /* DetailViewController.h */,
+				E85FED1819BBD0910078713F /* DetailViewController.m */,
+				E85FED1A19BBD0D30078713F /* GetSubjects.h */,
+				E85FED1B19BBD0D30078713F /* GetSubjects.m */,
+				E85FED1D19BBD1190078713F /* subject.h */,
+				E85FED1E19BBD1190078713F /* subject.m */,
 			);
 			path = MyResults;
 			sourceTree = "<group>";
@@ -233,7 +278,7 @@
 			files = (
 				E85FECE419BBCDE60078713F /* Main_iPad.storyboard in Resources */,
 				E85FECE919BBCDE60078713F /* Images.xcassets in Resources */,
-				E85FECE119BBCDE60078713F /* Main_iPhone.storyboard in Resources */,
+				E85FED2119BBD1AE0078713F /* Main_iPhone.storyboard in Resources */,
 				E85FECD819BBCDE60078713F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,9 +298,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E85FED1319BBD00F0078713F /* HomeModel.m in Sources */,
 				E85FECE719BBCDE60078713F /* ViewController.m in Sources */,
+				E85FED1619BBD04F0078713F /* User.m in Sources */,
+				E85FED0D19BBCF190078713F /* RegistrationViewController.m in Sources */,
+				E85FED1F19BBD1190078713F /* subject.m in Sources */,
 				E85FECDE19BBCDE60078713F /* AppDelegate.m in Sources */,
+				E85FED1919BBD0910078713F /* DetailViewController.m in Sources */,
+				E85FED1019BBCF840078713F /* NamesViewController.m in Sources */,
+				E85FED0719BBCE470078713F /* NoticesViewController.m in Sources */,
+				E85FED1C19BBD0D30078713F /* GetSubjects.m in Sources */,
 				E85FECDA19BBCDE60078713F /* main.m in Sources */,
+				E85FED0A19BBCEA30078713F /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,14 +338,6 @@
 				E85FECD719BBCDE60078713F /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E85FECDF19BBCDE60078713F /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E85FECE019BBCDE60078713F /* Base */,
-			);
-			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		E85FECE219BBCDE60078713F /* Main_iPad.storyboard */ = {
