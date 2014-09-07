@@ -56,34 +56,20 @@
 
 - (IBAction)RegisterMeClicked:(id)sender {
     
-    //NSInteger success = 0;
-    //@try {
+    NSInteger success = 0;
+    @try {
     
-    // if([[self.Username_Text text] isEqualToString:@""] || [[self.Password_Text text] isEqualToString:@""]|| [[self.Email_Text text] isEqualToString:@""]||[[self.F_Name_Text text] isEqualToString:@""] ||[[self.L_Name_Text text] isEqualToString:@""]  ) {
+     if([[self.Username_Text text] isEqualToString:@""] || [[self.Password_Text text] isEqualToString:@""]|| [[self.Email_Text text] isEqualToString:@""]||[[self.F_Name_Text text] isEqualToString:@""] ||[[self.L_Name_Text text] isEqualToString:@""]  ) {
+         
+        [self alertStatus:@"Please enter Email and Password" :@"Sign in Failed!" :0];
+     
+     }
+     
+     else {
+         
+         NSString *url = [NSString stringWithFormat:@"http://deshpande.net.nz/Registration.php?F_Name='%@'&L_Name='%@'&Email='%@'&Username='%@'&Password='%@'",[self.F_Name_Text text],[self.L_Name_Text text],[self.Email_Text text], [self.Username_Text text],[self.Password_Text text]];
     
-    // [self alertStatus:@"Please enter Email and Password" :@"Sign in Failed!" :0];
-    
-    //} else {
-    
-    /*NSString * _F_Name = [self.F_Name_Text text];
-     NSString * _L_Name = [self.L_Name_Text text];
-     NSString * _Email = [self.Email_Text text];
-     NSString * _Username = [self.Username_Text text];
-     NSString * _Password = [self.Password_Text text];*/
-    
-    
-    
-    
-    NSString *url = [NSString stringWithFormat:@"http://deshpande.net.nz/Registration.php?F_Name='%@'&L_Name='%@'&Email='%@'&Username='%@'&Password='%@'",[self.F_Name_Text text],[self.L_Name_Text text],[self.Email_Text text], [self.Username_Text text],[self.Password_Text text]];
-    //NSString *str1 =@"http://deshpande.net.nz/Registration.php?F_Name=";
-    //NSString *str3 =[str1 stringByAppendingString:str2];
-    //NSString *str2 = [NSString stringWithFormat:@"%@",[self.F_Name_Text text]];
-    //NSString *str3 =[str1 stringByAppendingString:str2];
-    //NSString *str4
-    //NSLog(@"str3:%@",str3);
-    
-    
-    NSLog(@"URL: %@", url);
+         NSLog(@"URL: %@", url);
     // build the request
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:url]];
@@ -91,72 +77,75 @@
     NSMutableData *body= [NSMutableData data];
     [request setHTTPBody:body];
     
-    //NSError *error = [[NSError alloc] init];
-    //  NSHTTPURLResponse *response = nil;
+    NSError *error = [[NSError alloc] init];
+     NSHTTPURLResponse *response = nil;
     
     
     // getting answer from the server.
     // you can echo message from the server let's say :"Update finish" or something like that...
-    NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:nil];
+    NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+         // NSData *urlData=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
     NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
     NSLog(@"returned: %@", returnString);
     
-    //NSLog(@"Response code: %ld", (long)[response statusCode]);
-    
-    //if ([response statusCode] >= 200 && [response statusCode] < 300)
-    //{
-    //NSString *responseData = [[NSString alloc]initWithData:returnData encoding:NSUTF8StringEncoding];
-    //  NSLog(@"Response ==> %@", responseData);
-    
-    //NSError *error = nil;
-    // NSDictionary *jsonData = [NSJSONSerialization
-    //                         JSONObjectWithData:returnData
-    //                       options:NSJSONReadingMutableContainers
-    //                     error:&error];
-    
-    //success = [jsonData[@"success"] integerValue];
-    // NSLog(@"Success: %ld",(long)success);
-    
-    //  if(success == 1)
-    //{
-    NSLog(@"Login SUCCESS");
-    //} else {
-    
-    //  NSString *error_msg = (NSString *) jsonData[@"error_message"];
-    //[self alertStatus:error_msg :@"Registration Failed!" :0];
-    // }
-    
-    // } else {
-    //if (error) NSLog(@"Error: %@", error);
-    //  [self alertStatus:@"Connection Failed" :@"Registration Failed!" :0];
-    // }
-    //}
-    //}
-    //  @catch (NSException * e) {
-    //    NSLog(@"Exception: %@", e);
-    //  [self alertStatus:@"Registration Failed." :@"Error!" :0];
-    //}
-    //if (success) {
-    //  [self performSegueWithIdentifier:@"registration_success" sender:self];
-    //}
+         NSLog(@"Response code: %ld", (long)[response statusCode]);
+         
+         if ([response statusCode] >= 200 && [response statusCode] < 300)
+         {
+             NSString *responseData = [[NSString alloc]initWithData:returnData encoding:NSUTF8StringEncoding];
+             NSLog(@"Response ==> %@", responseData);
+             
+             NSError *error = nil;
+             NSDictionary *jsonData = [NSJSONSerialization
+                                    JSONObjectWithData:returnData
+                                       options:NSJSONReadingMutableContainers
+                                       error:&error];
+             
+             
+             success = [jsonData[@"success"] integerValue];
+            // NSString *substring = [aString substringWithRange:NSMakeRange(15, 5)];
+             NSLog(@"Success: %ld",(long)success);
+             
+             if(success == 1)
+            {
+                NSLog(@"Username already registered");
+                 NSString *error_msg = (NSString *) jsonData[@"error_message"];
+                 [self alertStatus:error_msg :@"Username not available!" :0];
+             }
+             else if(success==2){
+                 NSLog(@"Registration SUCCESS");
+
+             
+             }
+            
+         }else {
+             //if (error) NSLog(@"Error: %@", error);
+             [self alertStatus:@"Connection Failed" :@"Sign in Failed!" :0];
+         }
+
+     }
 }
 
+    @catch (NSException * e) {
+        NSLog(@"Exception: %@", e);
+        [self alertStatus:@"Registration Failed." :@"Error!" :0];
+    }
+    if (success==2) {
+        [self performSegueWithIdentifier:@"registration_success" sender:self];
+    }
+}
 
-
-//- (void) alertStatus:(NSString *)msg :(NSString *)title :(int) tag
-//      {
-//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
-//                                                          message:msg
-//                                                       delegate:self
-//                                            cancelButtonTitle:@"Ok"
-//                                          otherButtonTitles:nil, nil];
-//alertView.tag = tag;
-//[alertView show];
-//}
-
-
-
+- (void) alertStatus:(NSString *)msg :(NSString *)title :(int) tag
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
+                                                        message:msg
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil, nil];
+    alertView.tag = tag;
+    [alertView show];
+}
 - (IBAction)BackgroundTap:(id)sender {
     [self.view endEditing:YES];
 }
@@ -165,6 +154,5 @@
     
     return YES;
 }
-
 
 @end

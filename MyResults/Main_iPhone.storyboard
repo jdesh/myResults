@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIP-xx-CbE">
-                                <rect key="frame" x="137" y="151" width="91" height="30"/>
+                                <rect key="frame" x="115" y="152" width="91" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Daily Notices">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lh0-O7-dY9">
-                                <rect key="frame" x="137" y="269" width="76" height="30"/>
+                                <rect key="frame" x="122" y="269" width="76" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="My Results">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="524" y="78"/>
+            <point key="canvasLocation" x="506" y="78"/>
         </scene>
         <!--Login View Controller - Login-->
         <scene sceneID="AXu-1T-Bhj">
@@ -240,13 +240,14 @@
                         <outlet property="Password_Text" destination="2Il-cD-4j1" id="TcE-Ip-CjB"/>
                         <outlet property="Username_Label" destination="c8H-LV-eJ0" id="057-FH-aUf"/>
                         <outlet property="Username_Text" destination="udn-aF-JAC" id="RFi-LJ-F4l"/>
-                        <segue destination="g9z-i9-Juu" kind="push" identifier="registration_success" id="BY4-sH-Iil"/>
+                        <segue destination="g9z-i9-Juu" kind="push" identifier="registration_success" id="Atg-ff-5AA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcd-dL-Za2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="YCF-yW-CwL">
                     <connections>
                         <action selector="BackgroundTap:" destination="oWK-NT-jAu" id="W32-yq-VnY"/>
+                        <outlet property="delegate" destination="4cS-pO-w4p" id="h06-jS-aca"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -385,6 +386,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Tmu-5f-Z29"/>
+        <segue reference="Atg-ff-5AA"/>
     </inferredMetricsTieBreakers>
 </document>

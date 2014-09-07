@@ -97,7 +97,8 @@
                 if(success == 1)
                 {
                     NSLog(@"Login SUCCESS");
-                } else {
+                }
+                else {
                     
                     NSString *error_msg = (NSString *) jsonData[@"error_message"];
                     [self alertStatus:error_msg :@"Sign in Failed!" :0];
